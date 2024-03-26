@@ -33,7 +33,7 @@ function TagsTable(props: TagsTableProps) {
     page: 0,
   });
 
-  function handleCountChange(
+  function handlePageSizeChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     const pageSize = Number(e.target.value);
@@ -67,7 +67,7 @@ function TagsTable(props: TagsTableProps) {
         aria-label="Tags per page"
         type="number"
         value={paginationModel.pageSize}
-        onChange={(e) => handleCountChange(e)}
+        onChange={(e) => handlePageSizeChange(e)}
       />
 
       <Box
@@ -83,6 +83,7 @@ function TagsTable(props: TagsTableProps) {
           onPaginationModelChange={setPaginationModel}
           disableRowSelectionOnClick
           autoHeight
+          pageSizeOptions={[]}
         />
       </Box>
     </Box>
