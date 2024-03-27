@@ -57,7 +57,7 @@ function TagsTable(props: TagsTableProps) {
         flexDirection: "column",
         gap: 1,
         width: "100%",
-        ...props.sx
+        ...props.sx,
       }}
     >
       <TextField
@@ -71,7 +71,6 @@ function TagsTable(props: TagsTableProps) {
         value={paginationModel.pageSize}
         onChange={(e) => handlePageSizeChange(e)}
       />
-
       <Box
         sx={{
           width: "100%",
@@ -83,7 +82,6 @@ function TagsTable(props: TagsTableProps) {
           columns={columns}
           paginationModel={paginationModel}
           onPaginationModelChange={setPaginationModel}
-          disableRowSelectionOnClick
           autoHeight
           pageSizeOptions={[]}
         />
