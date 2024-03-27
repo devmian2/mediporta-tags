@@ -17,5 +17,8 @@ export const Default: Story = {
       contentColumnWidth: 500,
       countColumnWidth: 500,
     },
+    sx: {
+      maxWidth: 1200,
+    },
   },
 };

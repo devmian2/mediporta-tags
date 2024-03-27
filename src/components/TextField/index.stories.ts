@@ -22,5 +22,9 @@ export const Default: Story = {
   args: {
     type: "text",
     label: "Label",
+    sx: {
+      width: 300,
+    },
   },
 };
+3

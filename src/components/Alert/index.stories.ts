@@ -22,5 +22,8 @@ export const Default: Story = {
   args: {
     severity: "info",
     children: "Alert content",
+    sx: {
+      width: "100%",
+    },
   },
 };

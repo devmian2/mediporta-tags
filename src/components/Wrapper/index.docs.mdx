@@ -1,0 +1,12 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Wrapper from "./index.stories";
+
+<Meta of={Wrapper} />
+
+# Wrapper
+
+Reusable wrapper component responsible for wrapping content. Style customization is possible through `sx` prop.
+By default it takes `100%` width, `100%` visible height and acts as flex column box.
+
+<Canvas of={Wrapper.Default} />

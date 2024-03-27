@@ -1,0 +1,13 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as TagsTableStories from "./index.stories";
+
+<Meta of={TagsTableStories} />
+
+# TagsTable
+
+Reusable tags table component responsible for display tags and their respective usage count.
+Style customization is possible through `sx` prop. It accepts `tags` prop in `[{ id: string, content: string, count: number }]` format.
+Additionaly it is possible to pass custom columns width through `options` prop.
+
+<Canvas of={TagsTableStories.Default} />

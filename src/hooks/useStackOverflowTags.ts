@@ -15,6 +15,13 @@ interface StackOverflowTagsResponse extends Response {
   has_more: boolean;
 }
 
+
+/**
+ * Custom hook to fetch Stack Overflow tags.
+ *
+ * @param pageSize The number of tags to fetch per page (default: 100).
+ * @returns An object containing the fetched tags, success status, and loading status.
+ */
 function useStackOverflowTags(pageSize = 100) {
   const [tags, setTags] = useState<StackOverflowTag[]>([]);
   const [success, setSuccess] = useState(false);

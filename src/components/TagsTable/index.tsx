@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, type BoxProps } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 type TagsTableProps = {
@@ -12,6 +12,7 @@ type TagsTableProps = {
     contentColumnWidth?: number;
     countColumnWidth?: number;
   };
+  sx?: BoxProps["sx"];
 };
 
 function TagsTable(props: TagsTableProps) {
@@ -56,6 +57,7 @@ function TagsTable(props: TagsTableProps) {
         flexDirection: "column",
         gap: 1,
         width: "100%",
+        ...props.sx
       }}
     >
       <TextField
